@@ -46,7 +46,7 @@ const RadioTileGroup = (props) => {
             />
             <div 
               className={`radio-tile flex flex-col items-center justify-center w-full h-full border-2 border-[#079ad9] rounded-md p-4 transition-transform duration-300 
-              ${selectedOption === option.id ? 'bg-[#14526c] text-white scale-110 border-gray-200' : ''}`}
+              ${selectedOption === option.id ? 'bg-[#14526c] text-white scale-110 border-gray-200' : 'text-gray-500'}`}
             >
               <div 
                 className={`icon mb-2 
@@ -57,7 +57,7 @@ const RadioTileGroup = (props) => {
               <label 
                 htmlFor={option.id} 
                 className={`radio-tile-label text-center text-xs font-semibold uppercase 
-                ${selectedOption === option.id ? 'text-white' : 'text-gray-300'}`}
+                ${selectedOption === option.id ? 'text-white' : 'text-gray-500'}`}
               >
                 {option.label}
               </label>

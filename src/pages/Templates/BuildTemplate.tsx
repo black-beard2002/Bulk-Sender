@@ -605,7 +605,7 @@ const BuildTemplate = () => {
         </div>
       )}
       <header className="relative top-0 w-full h-fit">
-        <div className="flex flex-wrap w-full rounded-md bg-gray-700 justify-between p-2 gap-4">
+        <div className="flex flex-wrap w-full rounded-md dark:bg-gray-700 bg-white justify-between p-2 gap-4">
           {/* Editable Name Section */}
           <div className="flex flex-col items-center gap-1">
             <div className="flex flex-row items-center gap-2">
@@ -614,7 +614,7 @@ const BuildTemplate = () => {
               </label>
               <button
                 onClick={() => setIsEditing(true)}
-                className="bg-gray-400 hover:bg-gray-500 rounded-full p-2"
+                className="dark:bg-gray-400 bg-blue-500 hover:bg-blue-600 dark:hover:bg-gray-500 rounded-full p-2"
               >
                 <Edit className="w-4 h-4" />
               </button>
@@ -672,10 +672,10 @@ const BuildTemplate = () => {
 
       <div className="flex flex-1 flex-col gap-6 sm:flex-col md:flex-col lg:g-[flex-row,justify-between]">
         <div className="flex flex-1 flex-col gap-6">
-          <div className="flex min-h-48 p-1 bg-gray-700 flex-col">
+          <div className="flex min-h-48 p-1 bg-white text-[#1985a4] dark:text-slate-50 dark:bg-gray-700 flex-col">
             <div className="h-auto mb-5 flex flex-col">
               <p className="font-bold text-lg">Header</p>
-              <span className=" text-gray-400 text-xs">
+              <span className=" dark:text-gray-400 text-gray-600 text-xs">
                 Add a title or choose which type of media you'll use for your
                 message header<span className="font-bold">(optional)</span>
               </span>
@@ -692,7 +692,7 @@ const BuildTemplate = () => {
                         value={messageHeaderText}
                         onChange={handleTextHeader}
                         maxLength={60}
-                        className="w-1/2 p-2 border text-sm rounded bg-gray-800 text-white"
+                        className="w-1/2 p-2 border text-sm rounded bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
                       />
                       <div>
                         <ButtonWithTooltip
@@ -726,14 +726,14 @@ const BuildTemplate = () => {
                                     [index]: e.target.value,
                                   }));
                                 }}
-                                className="p-2 border text-sm rounded bg-gray-800 text-white"
+                                className="p-2 border text-sm rounded bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
                               />
                               <button
                                 type="button"
                                 onClick={() => removeHeaderVariable(index)}
                                 className="bg-red-600 p-1 rounded"
                               >
-                                <Trash2 className="w-4 h-4" />
+                                <Trash2 className="w-4 h-4 text-slate-100" />
                               </button>
                             </div>
                           );
@@ -776,17 +776,17 @@ const BuildTemplate = () => {
             </div>
           </div>
 
-          <div className="flex bg-gray-700 flex-col p-1">
+          <div className="flex bg-white dark:text-slate-50 text-[#1980a4] dark:bg-gray-700 flex-col p-1">
             <div className="h-auto mb-5 flex flex-col">
               <p className="font-bold text-lg">Body</p>
-              <span className=" text-gray-400 text-xs">
+              <span className=" text-gray-700 dark:text-gray-400 text-xs">
                 Enter the text for your message in the language you've selected
               </span>
             </div>
             <div>
               <textarea
                 ref={textareaRef}
-                className="w-3/4 h-44 p-2 border rounded text-sm bg-gray-800 text-white"
+                className="w-3/4 h-44 p-2 border rounded text-sm bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
                 onChange={handleTextBody}
                 value={messageBodyText}
                 maxLength={1024}
@@ -824,14 +824,14 @@ const BuildTemplate = () => {
                               [index]: e.target.value,
                             }));
                           }}
-                          className="p-2 border text-sm rounded bg-gray-800 text-white"
+                          className="p-2 border text-sm rounded bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
                         />
                         <button
                           type="button"
                           onClick={() => removeBodyVariable(index)}
-                          className="bg-red-600 p-1 rounded"
+                          className="bg-red-600 p-1 text-slate-100 rounded"
                         >
-                          <Trash2 className="w-4 h-4" />
+                          <Trash2 className="w-4 h-4 " />
                         </button>
                       </div>
                     );
@@ -841,10 +841,10 @@ const BuildTemplate = () => {
             </div>
           </div>
 
-          <div className="flex bg-gray-700 flex-col p-1">
+          <div className="flex bg-white dark:bg-gray-700 flex-col p-1">
             <div className="h-auto mb-5 flex flex-col">
-              <p className="font-bold text-lg">Footer</p>
-              <span className=" text-gray-400 text-xs">
+              <p className="font-bold text-lg text-[#1980a5]">Footer</p>
+              <span className=" text-gray-700 dark:text-gray-400 text-xs">
                 Add a short line of text to the buttom of your message template.
                 <span className="font-bold">(optional)</span>
               </span>
@@ -856,16 +856,16 @@ const BuildTemplate = () => {
                 value={messageFooterText}
                 onChange={handleTextFooter}
                 maxLength={60}
-                className="w-1/2 p-2 border text-sm rounded bg-gray-800 text-white"
+                className="w-1/2 p-2 border text-sm rounded bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
               />
               <p className="text-sm text-gray-500">{footerCharCount}/60</p>
             </div>
           </div>
 
-          <div className="flex bg-gray-700 flex-col p-1">
+          <div className="flex bg-white dark:bg-gray-700 flex-col p-1">
             <div className="h-auto mb-5 flex flex-col">
-              <p className="font-bold text-lg">Buttons (Max 10)</p>
-              <span className="text-gray-400 text-xs">
+              <p className="font-bold text-lg text-[#1980a5]">Buttons (Max 10)</p>
+              <span className="text-gray-700 dark:text-gray-400 text-xs">
                 Create buttons that let customers respond to your message or
                 take actions.
                 <span className="font-bold">(optional)</span>
@@ -875,14 +875,14 @@ const BuildTemplate = () => {
               {buttons.map((button, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 bg-gray-800 p-2 rounded"
+                  className="flex items-center gap-2 bg-slate-200 dark:bg-gray-800 p-2 rounded"
                 >
                   <select
                     value={button.type}
                     onChange={(e) =>
                       updateButton(index, "type", e.target.value as ButtonType)
                     }
-                    className="bg-gray-700 text-white p-1 rounded"
+                    className="bg-white dark:bg-gray-700 text-gray-700 dark:text-white p-1 rounded"
                   >
                     <option value="visit">Visit Website</option>
                     <option value="call">Call</option>
@@ -898,7 +898,7 @@ const BuildTemplate = () => {
                         onChange={(e) =>
                           updateButton(index, "text", e.target.value)
                         }
-                        className="bg-gray-700 text-white p-1 rounded"
+                        className="bg-white dark:bg-gray-700 text-gray-700 dark:text-white p-1 rounded"
                       />
                       <input
                         type="text"
@@ -907,7 +907,7 @@ const BuildTemplate = () => {
                         onChange={(e) =>
                           updateButton(index, "url", e.target.value)
                         }
-                        className="bg-gray-700 text-white p-1 rounded"
+                        className="bg-white dark:bg-gray-700 text-gray-700 dark:text-white p-1 rounded"
                       />
                     </>
                   )}
@@ -921,7 +921,7 @@ const BuildTemplate = () => {
                         onChange={(e) =>
                           updateButton(index, "text", e.target.value)
                         }
-                        className="bg-gray-700 text-white p-1 rounded"
+                        className="bg-white dark:bg-gray-700 text-gray-700 dark:text-white p-1 rounded"
                       />
                       <input
                         type="text"
@@ -931,7 +931,7 @@ const BuildTemplate = () => {
                         onChange={(e) =>
                           updateButton(index, "phoneNumber", e.target.value)
                         }
-                        className="bg-gray-700 text-white p-1 rounded"
+                        className="bg-white dark:bg-gray-700 text-gray-700 dark:text-white p-1 rounded"
                       />
                     </>
                   )}
@@ -944,7 +944,7 @@ const BuildTemplate = () => {
                         updateButton(index, "copyCode", e.target.value)
                       }
                       maxLength={15}
-                      className="bg-gray-700 text-white p-1 rounded"
+                      className="bg-white dark:bg-gray-700 text-gray-700 dark:text-white p-1 rounded"
                     />
                   )}
                   {button.type === "quickReply" && (
@@ -956,7 +956,7 @@ const BuildTemplate = () => {
                         updateButton(index, "quickReply", e.target.value)
                       }
                       maxLength={25}
-                      className="bg-gray-700 text-white p-1 rounded"
+                      className="bg-white dark:bg-gray-700 text-gray-700 dark:text-white p-1 rounded"
                     />
                   )}
                   <button
@@ -964,7 +964,7 @@ const BuildTemplate = () => {
                     onClick={() => removeButton(index)}
                     className="bg-red-600 p-1 rounded"
                   >
-                    <Trash2 className="w-4 h-4" />
+                    <Trash2 className="w-4 h-4 text-slate-100" />
                   </button>
                 </div>
               ))}
