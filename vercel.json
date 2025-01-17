@@ -2,11 +2,11 @@
     "version": 2,
     "routes": [
         { 
-            "handle": "filesystem"
+            "handle": "filesystem",
         },
         {
             "src": "/.*",
-            "dest": "/index.html"
-        }
-    ]
+            "dest": "/index.html",
+        },
+    ],
 }
