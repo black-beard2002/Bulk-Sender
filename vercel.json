@@ -1,12 +1,12 @@
 {
-    "version": 2,
-    "routes": [
-        { 
-            "handle": "filesystem"
-        },
-        {
-            "src": "/.*",
-            "dest": "index.html"
-        }
-    ]
+  "version": 2,
+  "routes": [
+    {
+      "handle": "filesystem" // Route to filesystem if file exists
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html" // Fall back to index.html for all routes
+    }
+  ]
 }
