@@ -91,7 +91,7 @@ function SideNav({
                   alt="FlowBite Logo"
                 />
                 <span className="self-center text-xl font-semibold font-sans sm:text-2xl whitespace-nowrap text-[#4c5c68] dark:text-white">
-                  Flowbite
+                  Tele Sender
                 </span>
               </a>
             </div>
