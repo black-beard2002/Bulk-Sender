@@ -4,7 +4,9 @@ import { useGroup } from "../contexts/GroupsProvider";
 import CustomDropdown from "./CustomDropdown";
 import { Image } from "lucide-react";
 
-function GroupCard({ group }) {
+function GroupCard({ group,isTargeted }) {
+
+  console.log(isTargeted)
   const [isEditing, setIsEditing] = useState(false);
   const [editingField, setEditingField] = useState<string | null>(null);
   const { updateGroup, deleteGroup } = useGroup();
@@ -120,7 +122,7 @@ function GroupCard({ group }) {
           {preview}...
           <span
             onClick={() => setIsDescriptionExpanded(true)}
-            className="font-sans text-sm font-normal text-slate-300 hover:text-blue-700 cursor-pointer leading-relaxed text-inherit antialiased"
+            className="font-sans text-sm font-normal text-blue-400 dark:text-slate-300 hover:text-blue-700 cursor-pointer leading-relaxed text-inherit antialiased"
           >
             Read more
           </span>
@@ -144,7 +146,7 @@ function GroupCard({ group }) {
   };
 
   return (
-    <div className="relative flex w-80 flex-col rounded-xl bg-white/50 bg-clip-border text-gray-800 shadow-md">
+    <div className={`relative flex w-80 mb-8 flex-col rounded-xl bg-white/50 bg-clip-border text-gray-800 shadow-md ${isTargeted?'shadow-2xl scale-105':''}`}>
       <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
         {group.groupCoverImage ? (
           <img

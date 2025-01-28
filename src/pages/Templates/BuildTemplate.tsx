@@ -564,7 +564,7 @@ const BuildTemplate = () => {
 
   return (
     <form
-      className="flex flex-1 flex-col gap-6"
+      className="flex flex-1 p-5 flex-col gap-6"
       onSubmit={length === 1 ? UpdateTemplate : submitTemplate}
     >
       {warning && (
@@ -692,7 +692,7 @@ const BuildTemplate = () => {
                         value={messageHeaderText}
                         onChange={handleTextHeader}
                         maxLength={60}
-                        className="w-1/2 p-2 border text-sm rounded bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
+                        className="w-11/12 sm:w-1/2 p-2 border text-sm rounded bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
                       />
                       <div>
                         <ButtonWithTooltip
@@ -786,7 +786,7 @@ const BuildTemplate = () => {
             <div>
               <textarea
                 ref={textareaRef}
-                className="w-3/4 h-44 p-2 border rounded text-sm bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
+                className="w-full sm:w-3/4 h-44 p-2 border rounded text-sm bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
                 onChange={handleTextBody}
                 value={messageBodyText}
                 maxLength={1024}
@@ -856,13 +856,13 @@ const BuildTemplate = () => {
                 value={messageFooterText}
                 onChange={handleTextFooter}
                 maxLength={60}
-                className="w-1/2 p-2 border text-sm rounded bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
+                className="w-full sm:w-1/2 p-2 border text-sm rounded bg-slate-200 text-gray-700 dark:bg-gray-800 dark:text-white"
               />
               <p className="text-sm text-gray-500">{footerCharCount}/60</p>
             </div>
           </div>
 
-          <div className="flex bg-white dark:bg-gray-700 flex-col p-1">
+          <div className="flex bg-white dark:bg-gray-700 flex-col p-1 pb-3">
             <div className="h-auto mb-5 flex flex-col">
               <p className="font-bold text-lg text-[#1980a5]">Buttons (Max 10)</p>
               <span className="text-gray-700 dark:text-gray-400 text-xs">
@@ -974,7 +974,7 @@ const BuildTemplate = () => {
                 type="button"
                 onClick={() => addButton("visit")}
                 disabled={buttons.length >= 4}
-                className="bg-blue-600 text-sm p-2 rounded disabled:opacity-50"
+                className="bg-blue-600 text-xs sm:text-sm p-2 rounded disabled:opacity-50"
               >
                 Add Website Button
               </button>
@@ -982,7 +982,7 @@ const BuildTemplate = () => {
                 type="button"
                 onClick={() => addButton("call")}
                 disabled={buttons.length >= 4}
-                className="bg-blue-600 text-sm p-2 rounded disabled:opacity-50"
+                className="bg-blue-600 text-xs sm:text-sm p-2 rounded disabled:opacity-50"
               >
                 Add Call Button
               </button>
@@ -990,7 +990,7 @@ const BuildTemplate = () => {
                 type="button"
                 onClick={() => addButton("copy")}
                 disabled={buttons.length >= 4}
-                className="bg-blue-600 text-sm p-2 rounded disabled:opacity-50"
+                className="bg-blue-600 text-xs sm:text-sm p-2 rounded disabled:opacity-50"
               >
                 Add Copy Button
               </button>
@@ -998,14 +998,14 @@ const BuildTemplate = () => {
                 type="button"
                 onClick={() => addButton("quickReply")}
                 disabled={buttons.length >= 4}
-                className="bg-blue-600 text-sm p-2 rounded disabled:opacity-50"
+                className="bg-blue-600 text-xs sm:text-sm p-2 rounded disabled:opacity-50"
               >
                 Add Quick Reply
               </button>
             </div>
           </div>
         </div>
-        <div className="flex w-72 max-w-72 h-full gap-2 mx-auto flex-col">
+        <div className="flex w-72 max-w-72 h-full gap-2 mx-auto flex-col mb-3">
           <div className="flex justify-center bg-blue-600 p-1">
             <p className="text-gray-400 font-bold">Message preview</p>
           </div>

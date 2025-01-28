@@ -1,21 +1,37 @@
 import React, { useState } from "react";
 import { useAuth } from "../../contexts/AuthProvider";
+import PasswordResetPopup from "../../components/PasswordResetPopup";
 
 const SignIn: React.FC = () => {
   // Moved the hook to the top level
   const { signIn } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleSignIn = (e: React.FormEvent) => {
     e.preventDefault();
     signIn(email, password);
   };
+  const handlePasswordReset = async (email, newPassword) => {
+    // Handle the password reset logic here
+    console.log("Resetting password for:", email);
+    try {
+      // Make API call to reset password
+      await resetPassword(email, newPassword);
+      // Show success message
+    } catch (error) {
+      // Handle error
+    }
+  };
 
   return (
-    <div
-      className="flex w-full h-full justify-center bg-[url('https://wallpapercave.com/wp/wp10117165.png')] items-center bg-cover bg-center"
-    >
+    <div className="flex w-full h-full justify-center bg-[url('https://wallpapercave.com/wp/wp10117165.png')] items-center bg-cover bg-center">
+      <PasswordResetPopup
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        onSubmit={handlePasswordReset}
+      />
       <div className="flex p-1 w-96">
         <div className="max-w-lg w-full">
           <form
@@ -88,6 +104,7 @@ const SignIn: React.FC = () => {
                     <a
                       className="font-medium text-indigo-500 hover:text-indigo-400"
                       href="#"
+                      onClick={() => setIsOpen(true)}
                     >
                       Forgot your password?
                     </a>

@@ -56,7 +56,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex bg-[url('https://wallpapercave.com/wp/wp10117165.png')] bg-cover bg-center px-40 py-10 rounded-lg ">
+    <div className="flex justify-center items-center w-full h-full bg-[url('https://wallpapercave.com/wp/wp10117165.png')] bg-cover bg-center rounded-lg ">
       {alert && <CustomAlert1 message={alertMessage} color="red-500"/>}
       <div className="flex flex-col items-center justify-center h-fit dark">
         <div className="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">

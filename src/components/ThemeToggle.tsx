@@ -1,8 +1,15 @@
-import { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
+import { useContext, useEffect, useState } from "react";
+
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const [isChecked, setIsChecked] = useState(theme === "dark");
+
+  // Update the checkbox state whenever the theme changes
+  useEffect(() => {
+    setIsChecked(theme === "dark");
+  }, [theme]);
 
   return (
     <label className="inline-flex items-center relative">
@@ -10,9 +17,10 @@ function ThemeToggle() {
         className="peer hidden"
         id="toggle"
         type="checkbox"
+        checked={isChecked} // Set the checkbox checked state
         onChange={toggleTheme}
       />
-      <div className="relative w-[55px] h-[25px] bg-white peer-checked:bg-zinc-500 rounded-full after:absolute after:content-[''] after:w-[20px] after:h-[20px] after:bg-gradient-to-r from-orange-500 to-yellow-400 peer-checked:after:from-zinc-900 peer-checked:after:to-zinc-900 after:rounded-full after:top-[2.5px] after:left-[2.5px] active:after:w-[25px] peer-checked:after:left-[52.5px] peer-checked:after:translate-x-[-100%] shadow-sm duration-300 after:duration-300 after:shadow-md"></div>
+      <div className="relative w-[50px] h-[20px] bg-white peer-checked:bg-zinc-500 rounded-full after:absolute after:content-[''] after:w-[16px] after:h-[16px] after:bg-gradient-to-r from-orange-500 to-yellow-400 peer-checked:after:from-zinc-900 peer-checked:after:to-zinc-900 after:rounded-full after:top-[2.5px] after:left-[4px] active:after:w-[25px] peer-checked:after:left-[44px] peer-checked:after:translate-x-[-100%] shadow-sm duration-300 after:duration-300 after:shadow-md"></div>
       <svg
         height="0"
         width="50"
@@ -40,3 +48,4 @@ function ThemeToggle() {
 }
 
 export default ThemeToggle;
+

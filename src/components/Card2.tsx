@@ -9,8 +9,8 @@ function Card2(props) {
     props.onConfirm(password)
   }
   return (
-    <div className="w-64 flex flex-col p-4 relative items-center justify-center bg-gray-800 border border-gray-800 shadow-lg rounded-2xl">
-      <div>
+    <div className="w-72 flex flex-col p-4 relative items-center justify-center bg-gray-800 border border-gray-800 shadow-lg rounded-2xl">
+      <div className="w-full">
         <div className="text-center p-3 flex-auto justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +32,8 @@ function Card2(props) {
             cannot be undone
           </p>
         </div>
-        <form className="p-2 mt-1 flex flex-col gap-3" onSubmit={handleSubmit}>
-          <div className="input flex flex-col w-fit static">
+        <form className="p-2 mt-1 flex flex-col w-full gap-3" onSubmit={handleSubmit}>
+          <div className="input flex flex-col w-full static">
             <label
               htmlFor="input"
               className="text-blue-500 text-xs font-semibold relative top-2 ml-[7px] px-[3px] bg-[#272934] w-fit"
@@ -48,11 +48,11 @@ function Card2(props) {
               onChange={(e)=>setPassword(e.target.value)}
               placeholder="Write here..."
               name="input"
-              className="border-blue-600 input px-[10px] py-[11px] text-xs bg-[#272934] border-2 rounded-[5px] w-[210px] focus:outline-none placeholder:text-zinc-600"
+              className="border-blue-600 input px-[10px] py-[11px] text-xs w-full bg-[#272934] border-2 rounded-[5px]  focus:outline-none placeholder:text-zinc-600"
             />
           </div>
 
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center mt-5">
             <button
               onClick={props.onCancel}
               className="mb-2 md:mb-0 bg-gray-700 px-5 py-2 text-sm shadow-sm font-medium tracking-wider border-2 border-gray-600 hover:border-gray-700 text-gray-300 rounded-full hover:shadow-lg hover:bg-gray-800 transition ease-in duration-300"

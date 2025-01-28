@@ -33,14 +33,14 @@ const NewTemplate = () => {
       {showAlert2&&(<CustomAlert1 message="name must contain at least 5 characters!" color="red-500"/>)}
       <form
         onSubmit={submitHandler}
-        className="flex flex-col gap-4 p-6 pb-10 dark:g-[bg-gray-800 text-white] bg-[#1985a1] rounded-lg w-3/4 shadow-xl shadow-black"
+        className="flex flex-col gap-4 p-6 pb-10 dark:g-[bg-gray-800 text-white] dark:bg-gray-800 bg-[#1985a1] rounded-lg w-3/4 shadow-xl shadow-black"
       >
         <h2 className="text-lg font-semibold">CATEGORY</h2>
         <p className="text-sm  text-[#46494c] dark:text-gray-400 mb-4">
           Choose a category that best describes your message template.
         </p>
 
-        <label className="relative flex items-center gap-4 p-4 border rounded-lg cursor-pointer bg-[#c5c3c6] hover:bg-[#b2b2b2] dark:g-[bg-gray-700 hover:bg-gray-600]">
+        <label className="relative flex items-center gap-4 p-4 border rounded-lg cursor-pointer dark:bg-gray-700 bg-[#c5c3c6] hover:bg-[#b2b2b2] dark:hover:bg-gray-600">
           <input
             type="radio"
             name="category"
@@ -59,7 +59,7 @@ const NewTemplate = () => {
           </div>
         </label>
 
-        <label className="relative flex items-center gap-4 p-4 border rounded-lg cursor-pointer bg-[#c5c3c6] hover:bg-[#b2b2b2] dark:g-[bg-gray-700 hover:bg-gray-600]">
+        <label className="relative flex items-center dark:hover:bg-gray-600 dark:bg-gray-800 gap-4 p-4 border rounded-lg cursor-pointer bg-[#c5c3c6] hover:bg-[#b2b2b2] ">
           <input
             type="radio"
             name="category"
@@ -79,7 +79,7 @@ const NewTemplate = () => {
           </div>
         </label>
 
-        <label className="relative flex items-center gap-4 p-4 border rounded-lg cursor-pointer bg-[#c5c3c6] hover:bg-[#b2b2b2] dark:g-[bg-gray-700 hover:bg-gray-600]">
+        <label className="relative flex dark:hover:bg-gray-600 dark:bg-gray-800 items-center gap-4 p-4 border rounded-lg cursor-pointer bg-[#c5c3c6] hover:bg-[#b2b2b2] ">
           <input
             type="radio"
             name="category"
@@ -114,7 +114,7 @@ const NewTemplate = () => {
               setName(e.target.value);
               setCharCount(e.target.value.length)
             }}
-            className="w-full px-4 py-2 rounded-lg bg-[#c5c3c6] text-[#46494c] dark:g-[bg-gray-700 text-white] border border-gray-600 focus:ring dark:focus:ring-blue-500 focus:ring-zinc-400 outline-none"
+            className="w-full px-4 py-2 rounded-lg bg-[#c5c3c6] text-[#46494c] dark:bg-gray-700 dark:text-white border border-gray-600 focus:ring dark:focus:ring-blue-500 focus:ring-zinc-400 outline-none"
           />
         </div>
 

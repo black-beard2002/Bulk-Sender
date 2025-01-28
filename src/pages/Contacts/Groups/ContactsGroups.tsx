@@ -4,10 +4,15 @@ import { useGroup } from "../../../contexts/GroupsProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import GroupCard from "../../../components/GroupCard";
+import { useLocation } from "react-router-dom";
+
 
 function ContactsGroup() {
+  const location = useLocation();
   const { groups } = useGroup();
   const [filteredGroups, setFilteredGroups] = useState(groups); // State to hold filtered groups
+
+  const groupId = location.state;
 
   const handleGroupSearch = (e) => {
     const searchFor = e.target.value.toLowerCase(); // Convert to lowercase for case-insensitive search
@@ -32,7 +37,7 @@ function ContactsGroup() {
       </div>
       <div className="flex flex-wrap gap-10 justify-center pb-14">
         {filteredGroups.length > 0 ? (
-          filteredGroups.map((group) => <GroupCard key={group.id} group={group} />)
+          filteredGroups.map((group) => <GroupCard key={group.id} group={group} isTargeted={groupId?true:false}/>)
         ) : (
           <p className="text-gray-500 text-lg">No groups found</p> // Display a message if no groups match
         )}

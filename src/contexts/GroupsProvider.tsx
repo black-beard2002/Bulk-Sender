@@ -89,6 +89,7 @@ export const GroupProvider: React.FC<GroupProviderProps> = ({ children }) => {
         console.error(`Group with id ${groupId} not found or group name already exist`);
         return prevGroups;
       }
+      console.log(groupId,updatedFields)
       return prevGroups.map((group) =>
         group.id === groupId
           ? { ...group, ...updatedFields, lastUpdated: currentDate }
