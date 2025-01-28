@@ -212,7 +212,7 @@ function SideNav({
                 </span>
               </Link>
             </li>
-            <li onClick={()=>setIsSidebarOpen(false)}>
+            <li>
               <button
                 type="button"
                 onClick={toggleDropdown}
