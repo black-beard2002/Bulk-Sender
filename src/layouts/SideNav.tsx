@@ -84,14 +84,14 @@ function SideNav({
                 <span className="sr-only">Open sidebar</span>
                 <FontAwesomeIcon icon={faBarsStaggered} className="w-6 h-6 text-[#6daffe] dark:text-gray-500"/>
               </button>
-              <a href="https://flowbite.com" className="flex ms-2 md:me-24">
+              <a href="https://tele-bulksender.vercel.app" className="flex ms-2 md:me-24">
                 <img
-                  src="https://flowbite.com/docs/images/logo.svg"
+                  src="https://.com/docs/images/logo.svg"
                   className="h-8 me-3"
-                  alt="FlowBite Logo"
+                  alt="Tele-sender Logo"
                 />
                 <span className="self-center text-xl font-semibold font-sans sm:text-2xl whitespace-nowrap text-[#4c5c68] dark:text-white">
-                  Flowbite
+                  Tele Sender
                 </span>
               </a>
             </div>
