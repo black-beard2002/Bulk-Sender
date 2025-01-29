@@ -180,9 +180,9 @@ function SideNav({
             ${
               isMobile
                 ? `${
-                    isSidebarOpen ? "translate-x-0 w-52" : "-translate-x-full"
+                    isSidebarOpen ? "translate-x-0 w-56" : "-translate-x-full"
                   }`
-                : `${isHovered ? "w-60" : "w-[3.25rem]"} translate-x-0`
+                : `${isHovered ? "w-56" : "w-[3.25rem]"} translate-x-0`
             }
           `}
         aria-label="Sidebar"
