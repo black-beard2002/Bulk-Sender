@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthProvider";
 import ThemeToggle from "../components/ThemeToggle";
+import logo from "../../public/logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBagShopping,
@@ -86,7 +87,7 @@ function SideNav({
               </button>
               <a href="https://tele-bulksender.vercel.app" className="flex ms-2 md:me-24">
                 <img
-                  src="https://.com/docs/images/logo.svg"
+                  src={logo}
                   className="h-8 me-3"
                   alt="Tele-sender Logo"
                 />
