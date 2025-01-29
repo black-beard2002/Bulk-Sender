@@ -182,7 +182,7 @@ function SideNav({
                 ? `${
                     isSidebarOpen ? "translate-x-0 w-48" : "-translate-x-full"
                   }`
-                : `${isHovered ? "w-56" : "w-[3.25rem]"} translate-x-0`
+                : `${isHovered ? "w-60" : "w-[3.25rem]"} translate-x-0`
             }
           `}
         aria-label="Sidebar"
