@@ -24,7 +24,7 @@ const RootLayout = () => {
     <div className="flex h-screen w-screen flex-row">
       <div
         className={`flex transition-all duration-300 
-        ${isMobile ? "w-0" : isHovered ? "w-60" : "w-[3.25rem]"}`}
+        ${isMobile ? "w-0" : isHovered ? "w-56" : "w-[3.25rem]"}`}
       >
         <SideNav
           isHovered={isHovered}
