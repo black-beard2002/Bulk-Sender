@@ -180,7 +180,7 @@ function SideNav({
             ${
               isMobile
                 ? `${
-                    isSidebarOpen ? "translate-x-0 w-48" : "-translate-x-full"
+                    isSidebarOpen ? "translate-x-0 w-52" : "-translate-x-full"
                   }`
                 : `${isHovered ? "w-60" : "w-[3.25rem]"} translate-x-0`
             }
